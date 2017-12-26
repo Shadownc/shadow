@@ -51,14 +51,14 @@ var shadow = {
         }
 
         toSet() {
-            var y = date.getFullYear();
-            var m = date.getMonth() + 1;
+            var y = this.date.getFullYear();
+            var m = this.date.getMonth() + 1;
             m = m < 10 ? ('0' + m) : m;
-            var d = date.getDate();
+            var d = this.date.getDate();
             d = d < 10 ? ('0' + d) : d;
-            var h = date.getHours();
-            var minute = date.getMinutes();
-            var s = date.getSeconds();
+            var h = this.date.getHours();
+            var minute = this.date.getMinutes();
+            var s = this.date.getSeconds();
             s = s < 10 ? ('0' + s) : s;
             minute = minute < 10 ? ('0' + minute) : minute;
             if (this.type == 'hm') {
