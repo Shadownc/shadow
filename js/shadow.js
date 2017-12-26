@@ -37,5 +37,39 @@ var shadow = {
         }
 
         return pairs.join('&');
+    },
+    /**
+     * 
+     * 
+     * @class formatDateTime
+     */
+    formatDateTime: class formatDateTime {
+        constructor(date, type) {
+            //this.date = date ? data : new Date()
+            this.date = !date ? new Date() : (typeof date == 'number' ? new Date(date) : date)
+            this.type = type
+        }
+
+        toSet() {
+            var y = date.getFullYear();
+            var m = date.getMonth() + 1;
+            m = m < 10 ? ('0' + m) : m;
+            var d = date.getDate();
+            d = d < 10 ? ('0' + d) : d;
+            var h = date.getHours();
+            var minute = date.getMinutes();
+            var s = date.getSeconds();
+            s = s < 10 ? ('0' + s) : s;
+            minute = minute < 10 ? ('0' + minute) : minute;
+            if (this.type == 'hm') {
+                return h + ':' + minute
+            } else if (this.type == 'mdhm') {
+                return m + '-' + d + ' ' + h + ':' + minute
+            } if (this.type = 'ymd') {
+                return y + '-' + m + '-' + d
+            } else {
+                return y + '-' + m + '-' + d + ' ' + h + ':' + minute + ':' + s
+            }
+        }
     }
 }
