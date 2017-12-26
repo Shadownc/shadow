@@ -39,8 +39,8 @@ var shadow = {
         return pairs.join('&');
     },
     /**
-     * 
-     * 
+     * @desc 时间格式化
+     * @param date 时间戳或者new Date type 返回格式
      * @class formatDateTime
      */
     formatDateTime: class formatDateTime {
@@ -65,7 +65,7 @@ var shadow = {
                 return h + ':' + minute
             } else if (this.type == 'mdhm') {
                 return m + '-' + d + ' ' + h + ':' + minute
-            } if (this.type = 'ymd') {
+            } if (this.type == 'ymd') {
                 return y + '-' + m + '-' + d
             } else {
                 return y + '-' + m + '-' + d + ' ' + h + ':' + minute + ':' + s
