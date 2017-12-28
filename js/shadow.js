@@ -73,5 +73,4 @@ var shadow = {
         }
     }
 }
-//window.shadow = window.$ =shadow
-window.shadow = (window.$ ? window.$c : window.$) =shadow
+window.shadow = window.$c =shadow
